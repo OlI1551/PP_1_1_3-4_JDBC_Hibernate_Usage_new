@@ -13,7 +13,7 @@ public class UserDaoHibernateImpl implements UserDao {
     private final static String INSERT_USER = "INSERT INTO user(name, last_name, age) VALUES (?, ?, ?);";
     private final static String DELETE_USER = "DELETE FROM user WHERE id=?;";
     private final static String GET_ALL = "SELECT * FROM user;";
-    private final static String CLEAN_TABLE = "DELETE FROM user;";
+    private final static String CLEAN_TABLE = "TRUNCATE TABLE user;";
 
     private static final SessionFactory sessionFactory = Util.getSessionFactory();
 
